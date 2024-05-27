@@ -435,11 +435,15 @@ p {
   }
 
   footer {
+    margin-left: 1vh;
+    margin-right: 1vh;
     width: 100%;
     margin: 0;
   }
 
   .title {
+    margin-left: 1vh;
+    margin-right: 1vh;
     width: 100%;
     margin: 0;
     font-size: 4vh;
