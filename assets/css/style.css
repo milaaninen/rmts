@@ -365,6 +365,38 @@ p {
     margin: 0;
   }
 
+  footer {
+    width: 100%;
+    margin: 0;
+  }
+
+  .title {
+    width: 100%;
+    margin: 0;
+    font-size: 4vh;
+  }
+
+  .content {
+    width: 100%;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 4vh;
+  }
+
+  p {
+    font-size: 2vh;
+  }
+
+  #line_left {
+    left: 0;
+  }
+
+  #line_right {
+    right: 0;
+  }
+
   /* your 'mobile' overriding css properties here */
 
 
