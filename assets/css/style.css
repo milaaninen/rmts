@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+
+
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+
+/* 
+  You can use 'fontsquirrel' (https://www.fontsquirrel.com) 
+  or 'transfonter' (https://transfonter.org)
+  to generate your own font for the web from .ttf or .oft files 
+*/
+
+
+@font-face {
+  font-family: 'Highway';
+  src: url('../fonts/gothic/HWYGOTH.woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Authentic';
+  src: url('../fonts/authentic/AUTHENTICSans-90.woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
+/* VARIABLES */
+
+:root {
+  /* Color values */
+  --color-background: rgba(255,255,255,1);
+  --color-text: rgba(0,0,0,1);
+  --color-text-link: rgba(0,0,255,0.8);
+  --color-text-link-hover: rgba(0,0,255,0.4);
+  /* Font values */
+  --font-family: 'Highway', 'Helvetica', 'Arial', sans-serif;
+  --font-size: 24px;
+  /* Margin value */
+  --margin: 1rem;
+}
+
+
+
+/* GENERAL STYLES */
+
+html {
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+body {
+  position:relative;
+  background-color: var(--color-background);
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  width:100%;
+  height:auto;
+  overflow-y:auto;
+  background-color: whitesmoke;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+  /* color: var(--color-text-link); */
+  /* text-decoration: underline; */
+}
+
+a:hover {
+  /* color: var(--color-text-link-hover); */
+  /* text-decoration: underline; */
+}
+
+
+h1{
+  /* h1 style */
+}
+
+h2{
+  /* h2 style */
+}
+
+h3{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 3vh;
+  padding-bottom: 4vh;
+  font-size: 4.6vh;
+  /* border-top: 1vh gray dashed; */
+  border-bottom: 1vh gray dashed;
+}
+
+
+h4, h5, h6{
+  /* h4-h5-h6 style */
+}
+
+p{
+  /* paragraph style */
+}
+
+footer {
+  bottom: 0;
+  margin-top: 0;
+  z-index: 998;
+  width: 80%;
+  margin-left: 10%;
+  position: fixed;
+}
+
+footer img {
+  filter: saturate(0);
+}
+
+footer img:hover {
+  filter: saturate(1);
+}
+
+ol, ul{
+  /* ordered list and unordered list styles */
+  padding: 0;
+  padding-left: 2%;
+  padding-right: 2%;
+  /* margin-bottom: 1vh; */
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color: whitesmoke;
+}
+
+li {
+  font-size: 3vh;
+  text-align: center;
+  margin-top: 20%;
+  /* padding-bottom: 1vh; */
+}
+
+#navigator {
+  height: 0vh;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+
+#navigator.active {
+  height: 84vh;
+}
+
+/* Other existing CSS */
+
+
+blockquote{
+  /* blockquote element style */
+}
+
+hr{
+  /* horizontal rule style */
+}
+
+
+
+/* PAGE STYLES */
+
+/* page structure */
+
+div.page-wrapper {
+  /* the element that 'wraps' everything */
+  /* padding: var(--margin); */
+}
+
+/* navigation */
+ 
+nav{
+  
+}
+
+/* content */
+
+main{
+ 
+}
+
+summary{
+  
+}
+
+.section {
+position: relative;
+background-color: whitesmoke;
+}
+
+.border {
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.dot {
+  height: 4vh;
+  width: 4vh;
+  border-radius: 50%;
+  background-color: gray;
+  z-index: 2;
+}
+
+#line_left {
+  width: 2vh;
+  background-color: gray;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: 999;
+  left: 10%;
+}
+
+#line_right {
+  width: 2vh;
+  background-color: gray;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: 10%;
+  z-index: 999;
+}
+
+.line {
+  position: absolute;
+  background-color: gray;
+  height: 2vh;
+  width: 100%;
+  margin-top: 1vh;
+  z-index: 3;
+}
+
+.line_bottom {
+  position: absolute;
+  /* background-color: red; */
+  height: 2vh;
+  z-index: 1;
+  width: 100%;
+  margin-top: 2vh;
+}
+
+.line_top {
+  position: absolute;
+  /* background-color: red; */
+  height: 2vh;
+  z-index: 1;
+  width: 100%;
+}
+
+.title {
+  /* height: 5vh; */
+  /* background-color: red; */
+  line-height: 98%;
+  font-family: "Highway";
+  font-weight: bold;
+  font-size: 8vh;
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-bottom: -4vh;
+}
+
+.title_letter {
+  background-color: red;
+}
+
+.content {
+  width: 80%;
+  /* height: 100vh; */
+  background-color: whitesmoke;
+  margin-left: 10%;
+}
+
+.content_header {
+  justify-content: space-between;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border-top: 1vh dashed grey;
+  border-bottom: 1vh dashed grey;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  font-size: 4.6vh;
+}
+
+.inline {
+  width: 100%;
+  background-color: gray;
+  height: 1vh;
+}
+
+p {
+  margin: 0;
+  /* background-color: red; */
+  /* color: gray; */
+  color: black;
+  z-index: 992;
+  /* text-align: justify; */
+  hyphens: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 2vh;
+  padding-bottom: 8vh;
+  line-height: 130%;
+  /* font-family: "neue-haas-unica", sans-serif; */
+  font-family: 'Authentic';
+  /* font-weight: medium; */
+  font-style: normal;
+  font-size: 3.4vh;
+  /* font-size: 0.74rem; */
+  /* font-size: 1.32rem; */
+}
+
+
+
+
+
+
+/* UTILITY CLASSES */
+
+/* hide desktop mobile etc */
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+
+
+
+
+/* WEBSITE MEDIA QUERIES */
+
+/* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
+/* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
+
+@media (max-width: 779px) {
+
+  ul {
+    display: block;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* your 'mobile' overriding css properties here */
+
+
+
+  /* utility classes, mobile */
+
+  .desktop-only{
+    display:none;
+  }
+
+  .mobile-only{
+    display:block;
+  }
+
+}
+
+
+
+/* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+
+@media (max-width: 339px) {
+
+  /* your overriding css properties here */
+
+}
+
+
+
+/* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+@media (max-width: 779px) and (orientation: landscape) {
+
+   /* your overriding css properties here */
+
+}
+
+
+
+/* use this query to apply style for 'small' desktop screens */
+
+@media (min-width: 780px) and (max-width: 992px) {
+
+  /* your overriding css properties here */
+
+}
+
+
