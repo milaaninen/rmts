@@ -297,7 +297,7 @@ background-color: whitesmoke;
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
-  font-size: 4.6vh;
+  font-size: 4vh;
 }
 
 .inline {
@@ -365,6 +365,11 @@ p {
     margin: 0;
   }
 
+  li img {
+    max-height: 13vh;
+    width: auto;
+  }
+
   footer {
     width: 100%;
     margin: 0;
@@ -383,6 +388,12 @@ p {
   .content {
     width: 100%;
     margin: 0;
+  }
+
+  .content_header {
+    font-size: 4vh;
+    display: block;
+    text-align: center;
   }
 
   h3 {
@@ -432,6 +443,11 @@ p {
   li {
     padding: 0;
     margin: 0;
+  }
+
+  li img {
+    max-height: 13vh;
+    width: auto;
   }
 
   footer {
