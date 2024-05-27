@@ -368,11 +368,15 @@ p {
   footer {
     width: 100%;
     margin: 0;
+    margin-left: 1vh;
+    margin-right: 1vh;
   }
 
   .title {
-    width: 100%;
     margin: 0;
+    width: 100%;
+    margin-left: 1vh;
+    margin-right: 1vh;
     font-size: 4vh;
   }
 
