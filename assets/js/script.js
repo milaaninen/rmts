@@ -14,13 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     headers.forEach(header => {
         header.addEventListener('click', function() {
-            // Slide up all paragraphs except the next sibling
-            headers.forEach(h => {
-                if (h !== header && h.nextElementSibling.tagName === 'P') {
-                    h.nextElementSibling.style.display = 'none';
-                }
-            });
-
             // Toggle the next paragraph
             const nextParagraph = header.nextElementSibling;
             if (nextParagraph.tagName === 'P') {
@@ -32,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-}); 
+});
+
 
 //title toggle
 // document.addEventListener("DOMContentLoaded", function() {
