@@ -426,7 +426,7 @@ p {
 
   h3 {
     font-size: 4vh;
-    position: sticky;
+    /* position: sticky; */
     top: 11vh;
   }
 
