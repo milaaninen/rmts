@@ -13,10 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     headers.forEach(header => {
         header.addEventListener('click', function() {
+            // Toggle visibility of all headers except the clicked one
+            headers.forEach(h => {
+                if (h !== header) {
+                    h.style.display = h.style.display === 'none' ? 'block' : 'none';
+                }
+            });
+
             // Slide up all paragraphs except the next sibling
             headers.forEach(h => {
                 if (h !== header && h.nextElementSibling.tagName === 'P') {
                     h.nextElementSibling.style.display = 'none';
+                    h.style.position = 'relative'; // Set position to relative for all other headers
                 }
             });
 
@@ -25,14 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (nextParagraph.tagName === 'P') {
                 if (nextParagraph.style.display === 'none' || nextParagraph.style.display === '') {
                     nextParagraph.style.display = 'block';
+                    header.style.position = 'sticky'; // Set position to sticky for the clicked header
                 } else {
                     nextParagraph.style.display = 'none';
+                    header.style.position = 'relative'; // Set position back to relative when paragraph is hidden
                 }
             }
         });
     });
 });
-
 
 //title toggle
 // document.addEventListener("DOMContentLoaded", function() {

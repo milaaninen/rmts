@@ -100,7 +100,7 @@ h3{
   /* border-top: 1vh gray dashed; */
   background-color: whitesmoke;
   border-bottom: 1vh gray dashed;
-  position: sticky;
+  position: relative;
   top: 15vh;
 }
 
@@ -110,7 +110,7 @@ h4, h5, h6{
 }
 
 p{
-  display: hidden;
+  display: none;
   /* paragraph style */
 }
 
