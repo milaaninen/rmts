@@ -1,10 +1,11 @@
 // if you use jQuery, you need to start your .js file with this.
 // otherwise you can delete everything here.
-$(document).ready(function() {
-
-// functions go here
-
-});
+// $(document).ready(function() {
+//     $(".title").click(function(){
+//       $(".content").not($(this).next(".content")).slideUp();
+//       $(this).next(".content").slideToggle();
+//     });
+//   });
 
 document.addEventListener('DOMContentLoaded', function() {
     var menu = document.getElementById('menu');
@@ -56,3 +57,5 @@ updateTime();
 
 // Update the time every second
 setInterval(updateTime, 1000);
+
+
