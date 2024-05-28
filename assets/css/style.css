@@ -50,6 +50,7 @@ html {
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
   background-color: var(--color-background);
+  overflow-x: hidden;
 }
 
 body {
@@ -102,6 +103,10 @@ h3{
   border-bottom: 1vh gray dashed;
   position: relative;
   /* top: 15vh; */
+}
+
+h3:hover {
+  cursor: pointer;
 }
 
 
@@ -402,7 +407,7 @@ p {
   .title {
     margin: 0;
     width: 100%;
-    margin-left: 1vh;
+    /* margin-left: 1vh; */
     margin-right: 1vh;
     font-size: 4vh;
     margin-bottom: -4vh;  
