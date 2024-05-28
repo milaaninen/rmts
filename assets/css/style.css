@@ -66,6 +66,7 @@ body {
 img {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 a {
@@ -95,8 +96,12 @@ h3{
   padding-top: 3vh;
   padding-bottom: 4vh;
   font-size: 4.6vh;
+  z-index: 2;
   /* border-top: 1vh gray dashed; */
+  background-color: whitesmoke;
   border-bottom: 1vh gray dashed;
+  position: sticky;
+  top: 15vh;
 }
 
 
@@ -105,6 +110,7 @@ h4, h5, h6{
 }
 
 p{
+  display: hidden;
   /* paragraph style */
 }
 
@@ -194,11 +200,13 @@ summary{
 }
 
 .section {
+display: block;
 position: relative;
 background-color: whitesmoke;
 }
 
 .border {
+  z-index: 3;
   width: 100%;
   /* background-color: red; */
   display: flex;
@@ -273,7 +281,7 @@ background-color: whitesmoke;
   color: black;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   margin-bottom: -4vh;
 }
 
@@ -285,7 +293,7 @@ background-color: whitesmoke;
   /* position: fixed; */
   /* max-height: 0; */
   /* overflow: scroll; */
-  transition: max-height 0.3s ease-in-out;
+  /* display: none; */
   width: 80%;
   /* height: 100vh; */
   background-color: whitesmoke;
@@ -336,6 +344,7 @@ p {
   /* font-weight: medium; */
   font-style: normal;
   font-size: 3.4vh;
+  /* display: none; */
   /* font-size: 0.74rem; */
   /* font-size: 1.32rem; */
 }
@@ -395,6 +404,7 @@ p {
     margin-left: 1vh;
     margin-right: 1vh;
     font-size: 4vh;
+    margin-bottom: -4vh;  
   }
 
   .content {
@@ -410,6 +420,8 @@ p {
 
   h3 {
     font-size: 4vh;
+    position: sticky;
+    top: 11vh;
   }
 
   p {
@@ -488,6 +500,10 @@ p {
 
   p {
     font-size: 2vh;
+  }
+
+  span {
+    z-index: 1;
   }
 
   #line_left {

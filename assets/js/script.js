@@ -1,12 +1,79 @@
 // if you use jQuery, you need to start your .js file with this.
 // otherwise you can delete everything here.
+
 // $(document).ready(function() {
-//     $(".title").click(function(){
-//       $(".content").not($(this).next(".content")).slideUp();
-//       $(this).next(".content").slideToggle();
+//     $("h3").click(function(){
+//       $("p").not($(this).next("p")).slideUp();
+//       $(this).next("p").slideToggle();
 //     });
 //   });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const headers = document.querySelectorAll('h3');
+
+    headers.forEach(header => {
+        header.addEventListener('click', function() {
+            // Slide up all paragraphs except the next sibling
+            headers.forEach(h => {
+                if (h !== header && h.nextElementSibling.tagName === 'P') {
+                    h.nextElementSibling.style.display = 'none';
+                }
+            });
+
+            // Toggle the next paragraph
+            const nextParagraph = header.nextElementSibling;
+            if (nextParagraph.tagName === 'P') {
+                if (nextParagraph.style.display === 'none' || nextParagraph.style.display === '') {
+                    nextParagraph.style.display = 'block';
+                } else {
+                    nextParagraph.style.display = 'none';
+                }
+            }
+        });
+    });
+});
+
+
+//title toggle
+// document.addEventListener("DOMContentLoaded", function() {
+//     var titles = document.querySelectorAll(".title");
+//     var sections = document.querySelectorAll(".section");
+
+//     titles.forEach(function(title) {
+//         title.addEventListener("click", function() {
+//             var clickedSection = this.parentElement;
+//             var clickedContent = this.nextElementSibling;
+
+//             // Hide all other sections
+//             sections.forEach(function(section) {
+//                 if (section !== clickedSection) {
+//                     section.querySelector(".content").style.display = "none";
+//                     section.style.display = "none";
+//                 }
+//             });
+
+//             // Toggle the current section's content visibility
+//             if (clickedContent.style.display === "none" || clickedContent.style.display === "") {
+//                 // Show the current section and its content
+//                 clickedSection.style.display = "block";
+//                 clickedContent.style.display = "block";
+
+//                 // Scroll the clicked title to the top of the page
+//                 title.scrollIntoView({
+//                     behavior: "smooth"
+//                 });
+//             } else {
+//                 // Hide the current section's content and show all sections
+//                 clickedContent.style.display = "none";
+//                 sections.forEach(function(section) {
+//                     section.style.display = "block";
+//                 });
+//             }
+//         });
+//     });
+// });
+
+//menu toggle
 document.addEventListener('DOMContentLoaded', function() {
     var menu = document.getElementById('menu');
     var navMenu = document.getElementById('navigator');
