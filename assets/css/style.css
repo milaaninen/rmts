@@ -64,6 +64,10 @@ body {
   background-color: whitesmoke;
 }
 
+figure {
+  width: 100%;
+}
+
 img {
   margin: 0;
   padding: 0;
@@ -96,7 +100,7 @@ h3{
   margin-right: 10%;
   padding-top: 3vh;
   padding-bottom: 4vh;
-  font-size: 4.6vh;
+  font-size: 4vh;
   z-index: 2;
   /* border-top: 1vh gray dashed; */
   background-color: whitesmoke;
@@ -280,7 +284,7 @@ background-color: whitesmoke;
   line-height: 98%;
   font-family: "Highway";
   font-weight: bold;
-  font-size: 8vh;
+  font-size: 5vh;
   text-align: center;
   width: 80%;
   margin-left: 10%;
@@ -349,7 +353,7 @@ p {
   font-family: 'Authentic';
   /* font-weight: medium; */
   font-style: normal;
-  font-size: 3.4vh;
+  font-size: 3vh;
   /* display: none; */
   /* font-size: 0.74rem; */
   /* font-size: 1.32rem; */
