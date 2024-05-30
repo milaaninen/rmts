@@ -61,7 +61,7 @@ body {
   width:100%;
   height:auto;
   overflow-y:auto;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 figure {
@@ -103,7 +103,7 @@ h3{
   font-size: 4vh;
   z-index: 2;
   /* border-top: 1vh gray dashed; */
-  background-color: whitesmoke;
+  background-color: white;
   border-bottom: 1vh gray dashed;
   position: relative;
   /* top: 15vh; */
@@ -150,7 +150,7 @@ ol, ul{
   display: flex;
   justify-content: space-around;
   list-style: none;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 li {
@@ -212,7 +212,7 @@ summary{
 .section {
 display: block;
 /* position: relative; */
-background-color: whitesmoke;
+background-color: white;
 }
 
 .border {
@@ -306,7 +306,7 @@ background-color: whitesmoke;
   /* display: none; */
   width: 80%;
   /* height: 100vh; */
-  background-color: whitesmoke;
+  background-color: white;
   margin-left: 10%;
 }
 
