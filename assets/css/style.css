@@ -380,6 +380,38 @@ p {
   display: block;
 }
 
+table {
+  width: 80%;
+  margin-left: 10%;
+  border-collapse: collapse;
+  font-family: "Authentic";
+}
+table, th, td {
+  /* border: 1px solid black; */
+}
+th {
+  padding-bottom: 10px;
+  text-align: left;
+  font-family: Highway;
+  /* text-align: center;   */
+}
+
+td {
+  padding-top: 0.5vh;
+  border-top: 0.5vh grey solid;
+  /* border-left: 0.5vh grey solid; */
+  padding-left: 1rem;
+  /* height: 4vh; */
+}
+
+td:nth-of-type(1) {
+  border-right: 0.5vh gray solid;
+  font-family: monospace;
+}
+
+.delay {
+  color: red;
+}
 
 
 

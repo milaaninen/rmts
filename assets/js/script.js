@@ -27,6 +27,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+function formatTime(date) {
+    let hours = date.getHours().toString().padStart(2, '0');
+    let minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+}
+
+// Function to calculate and set the departure times with random delays
+function setDepartureTimes() {
+    const rows = document.querySelectorAll('tbody tr');
+    let currentTime = new Date();
+
+    // Set initial departure time to current time + 2 minutes
+    currentTime.setMinutes(currentTime.getMinutes() + 2);
+
+    rows.forEach((row, index) => {
+        // Calculate departure time for each row
+        const departureTime = new Date(currentTime.getTime());
+        departureTime.setMinutes(currentTime.getMinutes() + (index * 3));
+
+        // Randomly decide whether to add a delay
+        let delay = '';
+        if (Math.random() < 0.3) {  // 30% chance to add a delay
+            const delayMinutes = Math.floor(Math.random() * 6) + 1;  // Random delay between 1 and 6 minutes
+            departureTime.setMinutes(departureTime.getMinutes() + delayMinutes);
+            delay = ` +${delayMinutes} mins`;
+        }
+
+        // Set the departure time in the first column of each row
+        row.cells[0].innerText = formatTime(departureTime) + delay;
+    });
+}
+
+// Run the function to set departure times when the page loads
+window.onload = setDepartureTimes;
+
 
 //title toggle
 // document.addEventListener("DOMContentLoaded", function() {
