@@ -70,6 +70,7 @@ body {
   height:auto;
   overflow-y:auto;
   background-color: white;
+  /* overflow: hidden;*/
 }
 
 figure {
@@ -228,7 +229,9 @@ summary{
 .section {
 display: block;
 /* position: relative; */
+/* position: relative; */
 background-color: white;
+/* overflow: scroll; */
 }
 
 .border {
@@ -495,6 +498,15 @@ td:nth-of-type(1) {
 
   #line_right {
     right: 0;
+  }
+
+  th {
+    font-size: 2vh;
+    /* text-align: center;   */
+  }
+  
+  td {
+    font-size: 2vh;
   }
 
   /* your 'mobile' overriding css properties here */
