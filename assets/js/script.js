@@ -27,6 +27,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const sections = document.querySelectorAll('.section');
+
+//     sections.forEach(section => {
+//         const header = section.querySelector('h3');
+//         const contentDiv = section.querySelector('.content');
+
+//         header.addEventListener('click', function() {
+//             // Toggle the content div
+//             contentDiv.classList.toggle('hidden');
+//         });
+//     });
+// });
+
+
 function formatTime(date) {
     let hours = date.getHours().toString().padStart(2, '0');
     let minutes = date.getMinutes().toString().padStart(2, '0');
